@@ -1,0 +1,23 @@
+<h1>Listing membertypes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @membertypes.each do |membertype| %>
+  <tr>
+    <td><%= membertype.name %></td>
+    <td><%= link_to 'Show', membertype %></td>
+    <td><%= link_to 'Edit', edit_membertype_path(membertype) %></td>
+    <td><%= link_to 'Destroy', membertype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Membertype', new_membertype_path %>
